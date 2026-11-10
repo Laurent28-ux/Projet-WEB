@@ -116,13 +116,6 @@
     border-color: var(--color-sky);
     box-shadow: 0 0 0 3px rgb(128 177 242 / 18%);
 }
-
-.field-icon {
-    color: var(--color-primary);
-    font-size: 15px;
-    line-height: 1;
-}
-
 .search-field input,
 .search-field select {
     width: 100%;

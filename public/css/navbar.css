@@ -9,46 +9,6 @@
     box-shadow: 0 4px 18px rgb(29 51 98 / 5%);
 }
 
-.brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    color: var(--color-primary);
-}
-
-.brand__mark {
-    display: grid;
-    width: 43px;
-    height: 43px;
-    place-items: center;
-    border-radius: 14px;
-    background: var(--color-sky-soft);
-}
-
-.brand__mark svg {
-    width: 29px;
-    fill: var(--color-primary);
-    stroke: var(--color-primary);
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 1.5;
-}
-
-.brand__mark svg path + path {
-    fill: none;
-}
-
-.brand__name {
-    font-family: var(--font-heading);
-    font-size: 16px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-}
-
-.brand__name span {
-    color: var(--color-sky);
-}
-
 .nav-links {
     display: flex;
     align-items: center;
