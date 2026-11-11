@@ -1,21 +1,26 @@
 <?php
+require_once __DIR__ . '/../../Controllers/AuthController.php';
 $tripName = 'Circuit Japon 7j/6n';
 $tripPrice = 1099;
 $tripImage = 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=85';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Votre réservation | Click &amp; Go</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://
+fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../../../public/css/style.css">
     <link rel="stylesheet" href="../../../public/css/navbar.css">
     <link rel="stylesheet" href="../../../public/css/reservation.css">
 </head>
+
 <body>
     <?php include __DIR__ . '/../layouts/header.php'; ?>
 
@@ -28,11 +33,14 @@ $tripImage = 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=
         </div>
 
         <div class="booking-layout">
-            <form class="booking-form" id="reservation-form">
+            <form action="../../Controllers/AuthController.php" method="POST" class="booking-form">
                 <section class="booking-section">
                     <div class="section-title">
                         <span class="step-number">1</span>
-                        <div><h2>Votre séjour</h2><p>Choisissez vos dates et le nombre de voyageurs.</p></div>
+                        <div>
+                            <h2>Votre séjour</h2>
+                            <p>Choisissez vos dates et le nombre de voyageurs.</p>
+                        </div>
                     </div>
                     <div class="form-grid">
                         <label class="form-field" for="booking-departure">
@@ -66,20 +74,26 @@ $tripImage = 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=
                 <section class="booking-section">
                     <div class="section-title">
                         <span class="step-number">2</span>
-                        <div><h2>Informations du voyageur principal</h2><p>Ces coordonnées serviront au suivi de votre demande.</p></div>
+                        <div>
+                            <h2>Informations du voyageur principal</h2>
+                            <p>Ces coordonnées serviront au suivi de votre demande.</p>
+                        </div>
                     </div>
                     <div class="form-grid">
-                        <label class="form-field" for="booking-firstname"><span>Prénom</span><input id="booking-firstname" name="firstname" type="text" autocomplete="given-name" placeholder="Ex. Camille" required></label>
-                        <label class="form-field" for="booking-lastname"><span>Nom</span><input id="booking-lastname" name="lastname" type="text" autocomplete="family-name" placeholder="Ex. Martin" required></label>
-                        <label class="form-field" for="booking-email"><span>Adresse e-mail</span><input id="booking-email" name="email" type="email" autocomplete="email" placeholder="camille@exemple.fr" required></label>
-                        <label class="form-field" for="booking-phone"><span>Téléphone</span><input id="booking-phone" name="phone" type="tel" autocomplete="tel" placeholder="+33 6 00 00 00 00" required></label>
+                        <label class="form-field" for="booking-firstname"><span>Prénom</span><input  name="prenom" type="text" autocomplete="given-name" placeholder="Ex. Camille" required></label>
+                        <label class="form-field" for="booking-lastname"><span>Nom</span><input  name="nom" type="text" autocomplete="family-name" placeholder="Ex. Martin" required></label>
+                        <label class="form-field" for="booking-email"><span>Adresse e-mail</span><input  name="email" type="email" autocomplete="email" placeholder="camille@exemple.fr" required></label>
+                        <label class="form-field" for="booking-phone"><span>Téléphone</span><input  name="numero" type="tel" autocomplete="tel" placeholder="+33 6 00 00 00 00" required></label>
                     </div>
                 </section>
 
                 <section class="booking-section">
                     <div class="section-title">
                         <span class="step-number">3</span>
-                        <div><h2>Une demande particulière ?</h2><p>Faites-nous part de vos préférences ou besoins spécifiques.</p></div>
+                        <div>
+                            <h2>Une demande particulière ?</h2>
+                            <p>Faites-nous part de vos préférences ou besoins spécifiques.</p>
+                        </div>
                     </div>
                     <label class="form-field" for="booking-notes"><span>Message <span class="optional">(facultatif)</span></span><textarea id="booking-notes" name="notes" rows="4" placeholder="Régime alimentaire, accessibilité, occasion spéciale…"></textarea></label>
                 </section>
@@ -94,11 +108,11 @@ $tripImage = 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=
                 <div class="booking-summary__body">
                     <p class="card-category">JAPON · CIRCUIT ORGANISÉ</p>
                     <h2><?= htmlspecialchars($tripName, ENT_QUOTES, 'UTF-8') ?></h2>
-                    <p class="summary-rating"><span aria-hidden="true">★</span> 4,8 <span>(732 avis)</span></p>
+                    <p class="summary-rating"><span aria-hidden="true"><i class="fa-solid fa-star"></i></span> 4,8 <span>(732 avis)</span></p>
                     <ul class="summary-features">
-                        <li><span aria-hidden="true">✈</span> Vol aller-retour inclus</li>
-                        <li><span aria-hidden="true">▰</span> Hôtel 4 étoiles, 6 nuits</li>
-                        <li><span aria-hidden="true">⌖</span> Tokyo et Kyoto</li>
+                        <li><span aria-hidden="true"><i class="fa-solid fa-plane"></i></span> Vol aller-retour inclus</li>
+                        <li><span aria-hidden="true"><i class="fa-solid fa-hotel"></i></span> Hôtel 4 étoiles, 6 nuits</li>
+                        <li><span aria-hidden="true"><i class="fa-solid fa-globe"></i></span> Tokyo et Kyoto</li>
                     </ul>
                     <div class="summary-line"><span>Prix par voyageur</span><strong><?= number_format($tripPrice, 0, ',', ' ') ?> €</strong></div>
                     <div class="summary-line"><span>Voyageurs</span><strong id="summary-travelers">1</strong></div>
@@ -112,4 +126,5 @@ $tripImage = 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=
     <?php include __DIR__ . '/../layouts/footer.php'; ?>
     <script src="../../../public/js/reservation.js"></script>
 </body>
+
 </html>

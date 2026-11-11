@@ -1,4 +1,7 @@
 <?php
+require_once __DIR__ . '/../../controllers/ReservationController.php';
+?>
+<?php
 $pageTitle = 'Rechercher un voyage | Click & Go';
 ?>
 <!DOCTYPE html>
@@ -10,7 +13,7 @@ $pageTitle = 'Rechercher un voyage | Click & Go';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.clouflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../../../public/css/style.css">
     <link rel="stylesheet" href="../../../public/css/navbar.css">
     <link rel="stylesheet" href="../../../public/css/recherche.css">
@@ -93,8 +96,8 @@ $pageTitle = 'Rechercher un voyage | Click & Go';
                             </select>
                         </label>
                         <div class="view-switch" role="group" aria-label="Présentation des résultats">
-                            <button type="button" class="view-switch__button is-active" data-card-view="list" aria-label="Vue en liste" aria-pressed="true">☰</button>
-                            <button type="button" class="view-switch__button" data-card-view="grid" aria-label="Vue en grille" aria-pressed="false">▦</button>
+                            <button type="button" class="view-switch__button is-active" data-card-view="list" aria-label="Vue en liste" aria-pressed="true"><i class="fa-solid fa-list"></i> </button>
+                            <button type="button" class="view-switch__button" data-card-view="grid" aria-label="Vue en grille" aria-pressed="false"><i class="fa-solid fa-grip"></i> </button>
                         </div>
                     </div>
                 </div>

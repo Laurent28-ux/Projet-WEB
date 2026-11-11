@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../../../public/css/style.css">
     <link rel="stylesheet" href="../../../public/css/navbar.css">
     <link rel="stylesheet" href="../../../public/css/resultats.css">
@@ -83,10 +84,10 @@
             </div>
             <p class="trip-intro">Découvrez le Japon entre traditions et modernité !</p>
             <ul class="trip-includes" aria-label="Prestations incluses">
-                <li><span aria-hidden="true">✈</span> Vol inclus</li>
-                <li><span aria-hidden="true">▣</span> Hôtel 4★</li>
-                <li><span aria-hidden="true">♨</span> Pension complète</li>
-                <li><span aria-hidden="true">⌖</span> Tokyo, Kyoto</li>
+                <li><span aria-hidden="true"><i class="fa-solid fa-plane"></i></span> Vol inclus</li>
+                <li><span aria-hidden="true"><i class="fa-solid fa-hotel"></i></span> Hôtel 4<i class="fa-solid fa-star"></i></li>
+                <li><span aria-hidden="true"><i class="fa-solid fa-heart"></i></span> Pension complète</li>
+                <li><span aria-hidden="true"><i class="fa-solid fa-globe"></i></span> Tokyo, Kyoto</li>
             </ul>
             <nav class="tabs" aria-label="Informations sur le voyage" role="tablist">
                 <button class="tab is-active" id="tab-description" type="button" role="tab" aria-selected="true" aria-controls="panel-description">Description</button>
@@ -125,4 +126,5 @@
     <?php include __DIR__ . '/../layouts/footer.php'; ?>
     <script src="../../../public/js/resultat.js"></script>
 </body>
+
 </html>

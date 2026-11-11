@@ -17,7 +17,7 @@
         </label>
         <label class="search-field" for="travel-dates">
             <span class="search-field__label">Dates</span>
-            <span class="search-field__control">Depart<input id="travel-dates" name="dates" type="date" aria-label="Dates du séjour">Arrivee<input id="travel-dates" name="dates" type="date" aria-label="Dates du séjour"></span>
+            <span class="search-field__control"><input id="travel-dates" name="dates" type="date" aria-label="Dates du séjour"></span>
         </label>
         <label class="search-field search-field--travelers" for="travelers">
             <span class="search-field__label">Voyageurs</span>
