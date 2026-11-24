@@ -1,0 +1,403 @@
+/* ===== CLICK & GO - Page Guides (feuille de style autonome) =====
+   Bleu foncé : #1800ad
+   Bleu clair : #80b1f2
+   Blanc      : #ffffff
+*/
+
+/* ----- Base ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #11133b;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* ----- Boutons ----- */
+.bouton {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.bouton-contour {
+  border: 2px solid #1800ad;
+  color: #1800ad;
+}
+
+.bouton-plein {
+  border: 2px solid #1800ad;
+  background: #1800ad;
+  color: #ffffff;
+}
+
+/* ----- En-tête (collé en haut de l'écran) ----- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  background: #ffffff;
+}
+
+.logo-image {
+  display: block;
+  height: 80px;
+  mix-blend-mode: multiply; /* le fond blanc du logo devient transparent */
+}
+
+nav a {
+  margin: 0 15px;
+  color: #11133b;
+  white-space: nowrap; /* « À propos » reste sur une ligne */
+}
+
+nav a:hover,
+nav a.actif {
+  color: #1800ad;
+  font-weight: bold;
+}
+
+.compte {
+  display: flex;
+  gap: 12px;
+}
+
+/* ----- Sections ----- */
+.section {
+  padding: 80px 60px;
+}
+
+.fond-clair {
+  background: #f2f7ff;
+}
+
+/* 3 colonnes de même largeur */
+.grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+/* ----- Titre de la page ----- */
+.intro-guides {
+  padding: 80px 60px 60px;
+  background: #1800ad;
+  color: #ffffff;
+  text-align: center;
+}
+
+.intro-guides h1 {
+  font-size: 46px;
+  margin-bottom: 10px;
+}
+
+.intro-guides p {
+  margin-bottom: 25px;
+}
+
+.intro-guides input {
+  width: 100%;
+  max-width: 480px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+/* ----- Guide à la une ----- */
+.vedette {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffffff;
+  border: 1px solid #dce9fa;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.vedette img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+.vedette div {
+  padding: 40px;
+}
+
+.vedette h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.vedette p {
+  margin-bottom: 20px;
+  color: #646a85;
+}
+
+/* ----- Filtres ----- */
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filtres button {
+  padding: 9px 18px;
+  border: 2px solid #1800ad;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #1800ad;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filtres button.actif {
+  background: #1800ad;
+  color: #ffffff;
+}
+
+/* ----- Cartes des guides ----- */
+.carte {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #dce9fa;
+  border-radius: 20px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.carte:hover {
+  box-shadow: 0 10px 30px rgba(24, 0, 173, 0.15);
+}
+
+.carte img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.carte h3,
+.carte p {
+  padding: 0 20px;
+}
+
+.carte h3 {
+  margin: 15px 0 5px;
+}
+
+.carte p {
+  color: #646a85;
+}
+
+.carte .duree {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* ----- Étiquette de catégorie ----- */
+.etiquette {
+  display: inline-block;
+  margin: 15px 20px 0;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: #dce9fa;
+  color: #1800ad;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.vedette .etiquette {
+  margin: 0 0 15px;
+}
+
+/* ----- Filtrage : apparition douce ----- */
+.carte.cache {
+  display: none;
+}
+
+.carte.entre {
+  animation: entre 0.35s ease;
+}
+
+@keyframes entre {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.aucun {
+  display: none;
+  padding: 30px 0;
+  color: #646a85;
+}
+
+/* ----- FAQ ----- */
+.faq details {
+  margin-bottom: 12px;
+  padding: 18px 24px;
+  background: #ffffff;
+  border: 1px solid #dce9fa;
+  border-radius: 14px;
+}
+
+.faq summary {
+  color: #1800ad;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.faq details p {
+  margin-top: 12px;
+  color: #646a85;
+}
+
+/* ----- Newsletter ----- */
+.newsletter {
+  padding: 80px 60px;
+  background: #1800ad;
+  color: #ffffff;
+  text-align: center;
+}
+
+.newsletter h2 {
+  margin-bottom: 10px;
+}
+
+.newsletter form {
+  margin-top: 25px;
+}
+
+.newsletter input {
+  width: 300px;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+}
+
+.newsletter button {
+  padding: 13px 25px;
+  border: none;
+  border-radius: 10px;
+  background: #80b1f2;
+  color: #1800ad;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ----- Pied de page ----- */
+footer {
+  padding: 50px 60px 20px;
+  background: #f2f7ff;
+}
+
+.colonnes {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 30px;
+}
+
+.colonnes h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.colonnes a {
+  display: block;
+  margin-bottom: 8px;
+  color: #646a85;
+}
+
+.colonnes a:hover {
+  color: #1800ad;
+}
+
+.copyright {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #dce9fa;
+  color: #646a85;
+  font-size: 14px;
+}
+
+/* ----- Tablette et téléphone ----- */
+@media (max-width: 1000px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .intro-guides {
+    padding: 50px 20px 40px;
+  }
+
+  .intro-guides h1 {
+    font-size: 34px;
+  }
+
+  .vedette {
+    grid-template-columns: 1fr;
+  }
+
+  .vedette div {
+    padding: 25px;
+  }
+
+  .section,
+  .newsletter,
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .grille,
+  .colonnes {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav a {
+    margin: 0 6px;
+    font-size: 14px;
+  }
+}
+
+/* ----- Moins de mouvement si le visiteur le demande ----- */
+@media (prefers-reduced-motion: reduce) {
+  .carte.entre {
+    animation: none;
+  }
+}

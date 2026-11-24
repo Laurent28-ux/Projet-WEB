@@ -1,0 +1,659 @@
+/* ===== CLICK & GO - Page À propos (feuille de style autonome) =====
+   Bleu foncé : #1800ad   Bleu clair : #80b1f2   Blanc : #ffffff
+   Brume : #f2f7ff        Ligne : #dce9fa         Encre : #11133b
+   Gris-bleu : #646a85
+*/
+
+/* ----- Base ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #11133b;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+:focus-visible {
+  outline: 3px solid #80b1f2;
+  outline-offset: 3px;
+}
+
+/* ----- Boutons ----- */
+.bouton {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.bouton-contour {
+  border: 2px solid #1800ad;
+  color: #1800ad;
+}
+
+.bouton-plein {
+  border: 2px solid #1800ad;
+  background: #1800ad;
+  color: #ffffff;
+}
+
+/* ----- En-tête (collé en haut) ----- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  background: #ffffff;
+}
+
+.logo-image {
+  display: block;
+  height: 80px;
+  mix-blend-mode: multiply;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #11133b;
+  white-space: nowrap;
+}
+
+nav a:hover,
+nav a.actif {
+  color: #1800ad;
+  font-weight: bold;
+}
+
+.compte {
+  display: flex;
+  gap: 12px;
+}
+
+/* ===== BANDEAU ===== */
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 70px;
+  align-items: center;
+  padding: 100px 60px 120px;
+  background: #1800ad;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.hero h1 {
+  margin-bottom: 26px;
+  font-size: clamp(40px, 5.4vw, 78px);
+  line-height: 1.05;
+}
+
+.hero h1 span {
+  display: block;
+}
+
+.chapeau {
+  max-width: 520px;
+  color: #dce9fa;
+  font-size: 19px;
+}
+
+/* Le seul moment orchestré de la page : le titre monte ligne par ligne */
+.hero h1 span {
+  animation: monte 0.8s ease backwards;
+}
+.hero h1 span:nth-child(2) { animation-delay: 0.25s; }
+.chapeau { animation: monte 0.8s ease 0.55s backwards; }
+.billet  { animation: pose 0.9s ease 0.8s backwards; }
+
+@keyframes monte {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes pose {
+  from { opacity: 0; transform: translateY(40px) rotate(4deg); }
+  to   { opacity: 1; transform: rotate(-3deg); }
+}
+
+/* ----- Carte d'embarquement ----- */
+.billet {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  background: #ffffff;
+  color: #11133b;
+  border-radius: 20px;
+  box-shadow: 0 24px 50px rgba(5, 0, 60, 0.4);
+  transform: rotate(-3deg);
+}
+
+/* Les deux encoches de la perforation */
+.billet::before,
+.billet::after {
+  content: "";
+  position: absolute;
+  right: 106px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #1800ad;
+}
+.billet::before { top: -14px; }
+.billet::after  { bottom: -14px; }
+
+.billet-corps {
+  padding: 28px 30px;
+}
+
+.billet-titre {
+  color: #1800ad;
+  font-weight: bold;
+}
+
+.trajet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.trajet span {
+  display: block;
+  color: #646a85;
+  font-size: 13px;
+}
+
+.trajet strong {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
+  line-height: 1.15;
+}
+
+.trajet svg {
+  flex: none;
+  width: 80px;
+  height: 24px;
+}
+
+.infos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.infos dt {
+  color: #646a85;
+  font-size: 13px;
+}
+
+.infos dd {
+  font-weight: bold;
+}
+
+.billet-souche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  border-left: 2px dashed #80b1f2;
+  color: #1800ad;
+  font-weight: bold;
+}
+
+.code-barres {
+  width: 56px;
+  height: 90px;
+  background: repeating-linear-gradient(
+    90deg,
+    #11133b 0 2px, transparent 2px 5px,
+    #11133b 5px 6px, transparent 6px 10px
+  );
+}
+
+/* ===== PARCOURS ===== */
+.parcours {
+  position: relative;
+  padding: 30px 60px 60px;
+  background: #ffffff;
+}
+
+/* Le tracé de vol (dessiné par le JavaScript) */
+.trace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.trace .fond {
+  fill: none;
+  stroke: #dce9fa;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 2 10;
+}
+
+.trace .fait {
+  fill: none;
+  stroke: #1800ad;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.avion path {
+  fill: #1800ad;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+/* Une étape : le texte d'un côté, le repère au centre */
+.escale {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 140px;
+  padding: 70px 0;
+}
+
+.escale .texte {
+  grid-column: 1;
+  text-align: right;
+}
+
+.parcours .escale:nth-of-type(even) .texte {
+  grid-column: 2;
+  text-align: left;
+}
+
+.escale h2 {
+  margin-bottom: 12px;
+  color: #646a85;
+  font-size: 32px;
+  line-height: 1.2;
+  transition: color 0.4s ease;
+}
+
+.escale.passe h2 {
+  color: #1800ad;
+}
+
+.escale p {
+  color: #646a85;
+}
+
+/* Le repère qui s'allume quand l'avion est passé */
+.repere {
+  position: absolute;
+  top: 78px;
+  left: 50%;
+  z-index: 2;
+  width: 22px;
+  height: 22px;
+  margin-left: -11px;
+  border: 3px solid #80b1f2;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.escale.passe .repere {
+  border-color: #1800ad;
+  background: #1800ad;
+}
+
+/* ----- Équipe ----- */
+.equipage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 26px;
+  list-style: none;
+  text-align: left;
+}
+
+.equipage li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.initiales {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background: #1800ad;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.equipage strong {
+  color: #11133b;
+}
+
+.equipage span:last-child {
+  color: #646a85;
+  font-size: 14px;
+}
+
+/* ----- Dernière étape : l'arrivée ----- */
+.parcours .escale.arrivee {
+  grid-template-columns: 1fr;
+  padding-top: 120px;
+  padding-bottom: 40px;
+}
+
+.parcours .escale.arrivee .texte {
+  grid-column: 1;
+  text-align: center;
+}
+
+.arrivee .bouton {
+  margin-top: 22px;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  padding: 90px 60px;
+  background: #1800ad;
+  color: #ffffff;
+}
+
+.contact h2 {
+  margin-bottom: 18px;
+  font-size: 40px;
+  line-height: 1.15;
+}
+
+.contact-infos p {
+  max-width: 420px;
+  color: #dce9fa;
+}
+
+.coordonnees {
+  margin-top: 30px;
+  list-style: none;
+}
+
+.coordonnees li {
+  margin-bottom: 14px;
+}
+
+.coordonnees span {
+  display: block;
+  color: #80b1f2;
+  font-size: 14px;
+}
+
+.coordonnees strong {
+  font-size: 18px;
+}
+
+.carte-contact {
+  padding: 34px;
+  background: #ffffff;
+  border-radius: 20px;
+  color: #11133b;
+}
+
+.carte-contact label {
+  display: block;
+  margin-bottom: 16px;
+  color: #1800ad;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.carte-contact input,
+.carte-contact select,
+.carte-contact textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  border: 1px solid #dce9fa;
+  border-radius: 10px;
+  background: #f2f7ff;
+  color: #11133b;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.carte-contact textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.carte-contact button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #1800ad;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.carte-contact button:hover {
+  background: #11133b;
+}
+
+/* Confirmation d'envoi */
+.merci {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.merci svg {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 14px;
+}
+
+.merci circle {
+  fill: none;
+  stroke: #dce9fa;
+  stroke-width: 4;
+}
+
+.merci path {
+  fill: none;
+  stroke: #1800ad;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 0;
+  animation: coche 0.6s ease 0.1s backwards;
+}
+
+@keyframes coche {
+  from { stroke-dashoffset: 40; }
+  to   { stroke-dashoffset: 0; }
+}
+
+.merci h3 {
+  margin-bottom: 8px;
+  color: #1800ad;
+  font-size: 26px;
+}
+
+.merci p {
+  color: #646a85;
+}
+
+/* ----- Pied de page ----- */
+footer {
+  padding: 50px 60px 20px;
+  background: #f2f7ff;
+}
+
+.colonnes {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 30px;
+}
+
+.colonnes h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.colonnes a {
+  display: block;
+  margin-bottom: 8px;
+  color: #646a85;
+}
+
+.colonnes a:hover {
+  color: #1800ad;
+}
+
+.copyright {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #dce9fa;
+  color: #646a85;
+  font-size: 14px;
+}
+
+/* ===== TABLETTE ET TÉLÉPHONE ===== */
+@media (max-width: 1000px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 60px 20px 80px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 20px;
+  }
+
+  .colonnes {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  /* La route passe sur le côté gauche */
+  .parcours {
+    padding: 10px 20px 40px;
+  }
+
+  .escale {
+    grid-template-columns: 1fr;
+    padding: 56px 0 56px 56px;
+  }
+
+  .escale .texte,
+  .parcours .escale:nth-of-type(even) .texte,
+  .parcours .escale.arrivee .texte {
+    grid-column: 1;
+    text-align: left;
+  }
+
+  .repere {
+    top: 64px;
+    left: 24px;
+  }
+
+  .parcours .escale.arrivee {
+    padding-top: 56px;
+    padding-bottom: 20px;
+  }
+
+  .escale h2 {
+    font-size: 26px;
+  }
+
+  nav a {
+    margin: 0 6px;
+    font-size: 14px;
+  }
+
+  .infos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .billet {
+    grid-template-columns: 1fr 90px;
+  }
+
+  .billet::before,
+  .billet::after {
+    right: 76px;
+  }
+}
+
+/* ----- Moins de mouvement si le visiteur le demande ----- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero h1 span,
+  .chapeau,
+  .billet,
+  .merci path {
+    animation: none;
+  }
+
+  .escale h2,
+  .repere {
+    transition: none;
+  }
+}

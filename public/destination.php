@@ -12,23 +12,23 @@
 
   <!-- ===== EN-TÊTE ===== -->
   <header>
-    <a href="index.html"><img class="logo-image" src="img/logo.jpg" alt="Click & Go"></a>
+    <a href="index.php"><img class="logo-image" src="img/logo.jpg" alt="Click & Go"></a>
     <nav>
-      <a href="index.html">Accueil</a>
-      <a class="actif" href="offres.html">Explorer</a>
-      <a href="destinations.html">Destinations</a>
-      <a href="guides.html">Guides</a>
-      <a href="a-propos.html">À propos</a>
+      <a href="index.php">Accueil</a>
+      <a class="actif" href="offres.php">Explorer</a>
+      <a href="destinations.php">Destinations</a>
+      <a href="guides.php">Guides</a>
+      <a href="a-propos.php">À propos</a>
     </nav>
     <div class="compte">
-      <a class="bouton bouton-contour" href="login.html">Se connecter</a>
-      <a class="bouton bouton-plein" href="inscription.html">S'inscrire</a>
+      <a class="bouton bouton-contour" href="login.php">Se connecter</a>
+      <a class="bouton bouton-plein" href="inscription.php">S'inscrire</a>
     </div>
   </header>
 
   <!-- ===== BANNIÈRE : photo + voile bleu, comme sur l'accueil ===== -->
   <section class="bandeau-voyage">
-    <p class="fil"><a href="index.html">Accueil</a> / <a href="offres.html">Explorer</a> / Les Cyclades</p>
+    <p class="fil"><a href="index.php">Accueil</a> / <a href="offres.php">Explorer</a> / Les Cyclades</p>
 
     <div class="titre">
       <div>
@@ -147,7 +147,7 @@
         <p class="prix-depart">629 € <small>/ personne</small></p>
         <p class="petit">soit 1 258 € pour 2 voyageurs</p>
 
-        <form action="login.html" method="get">
+        <form action="login.php" method="get">
           <label>
             Date de départ
             <select name="depart">
@@ -186,21 +186,21 @@
   <footer>
     <div class="colonnes">
       <div>
-        <a href="index.html"><img class="logo-image" src="img/logo.jpg" alt="Click & Go"></a>
+        <a href="index.php"><img class="logo-image" src="img/logo.jpg" alt="Click & Go"></a>
         <p>Le monde à portée de clic.</p>
       </div>
       <div>
         <h3>Réserver</h3>
-        <a href="offres.html">Vols</a>
-        <a href="offres.html">Hébergements</a>
-        <a href="offres.html">Voyages tout prêts</a>
-        <a href="offres.html">Activités</a>
+        <a href="offres.php">Vols</a>
+        <a href="offres.php">Hébergements</a>
+        <a href="offres.php">Voyages tout prêts</a>
+        <a href="offres.php">Activités</a>
       </div>
       <div>
         <h3>Découvrir</h3>
-        <a href="destinations.html">Destinations</a>
-        <a href="guides.html">Guides et conseils</a>
-        <a href="a-propos.html">À propos et contact</a>
+        <a href="destinations.php">Destinations</a>
+        <a href="guides.php">Guides et conseils</a>
+        <a href="a-propos.php">À propos et contact</a>
       </div>
     </div>
     <p class="copyright">© 2026 Click & Go</p>

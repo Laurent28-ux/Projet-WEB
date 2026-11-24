@@ -12,23 +12,23 @@
 
   <!-- ===== EN-TÊTE ===== -->
   <header>
-    <a href="index.html"><img class="logo-image" src="img/logo.jpg" alt="Click & Go"></a>
+    <a href="index.php"><img class="logo-image" src="img/logo.jpg" alt="Click & Go"></a>
     <nav>
-      <a href="index.html">Accueil</a>
-      <a class="actif" href="offres.html">Explorer</a>
-      <a href="destinations.html">Destinations</a>
-      <a href="guides.html">Guides</a>
-      <a href="a-propos.html">À propos</a>
+      <a href="index.php">Accueil</a>
+      <a class="actif" href="offres.php">Explorer</a>
+      <a href="destinations.php">Destinations</a>
+      <a href="guides.php">Guides</a>
+      <a href="a-propos.php">À propos</a>
     </nav>
     <div class="compte">
-      <a class="bouton bouton-contour" href="login.html">Se connecter</a>
-      <a class="bouton bouton-plein" href="inscription.html">S'inscrire</a>
+      <a class="bouton bouton-contour" href="login.php">Se connecter</a>
+      <a class="bouton bouton-plein" href="inscription.php">S'inscrire</a>
     </div>
   </header>
 
   <!-- ===== HAUT DE PAGE ===== -->
   <section class="haut-page">
-    <p class="fil"><a href="index.html">Accueil</a> / Explorer</p>
+    <p class="fil"><a href="index.php">Accueil</a> / Explorer</p>
     <p class="sur-titre">Trouvez votre prochaine évasion</p>
     <h1>Des voyages pour chaque <em>envie</em></h1>
     <p>Plage, culture, nature ou aventure : explorez nos séjours sélectionnés avec soin.</p>
@@ -38,10 +38,10 @@
   <div class="explorer">
 
     <!-- Filtres à gauche -->
-    <form class="filtres" action="offres.html" method="get">
+    <form class="filtres" action="offres.php" method="get">
       <div class="filtres-titre">
         <h2>Filtres</h2>
-        <a href="offres.html">Réinitialiser</a>
+        <a href="offres.php">Réinitialiser</a>
       </div>
 
       <h3>Votre envie</h3>
@@ -88,7 +88,7 @@
       </div>
 
       <div class="liste-voyages">
-        <a class="voyage" href="destination.html">
+        <a class="voyage" href="destination.php">
           <div class="voyage-image">
             <img src="https://images.unsplash.com/photo-1791188213460-321332b70cab?w=800" alt="Syros, Grèce">
             <span class="etiquette">Best-seller</span>
@@ -104,7 +104,7 @@
           </div>
         </a>
 
-        <a class="voyage" href="destination.html">
+        <a class="voyage" href="destination.php">
           <div class="voyage-image">
             <img src="https://images.unsplash.com/photo-1791802100926-b8aee871c486?w=800" alt="Menton, France">
             <span class="etiquette">Coup de cœur</span>
@@ -120,7 +120,7 @@
           </div>
         </a>
 
-        <a class="voyage" href="destination.html">
+        <a class="voyage" href="destination.php">
           <div class="voyage-image">
             <img src="https://images.unsplash.com/photo-1684852711123-53815b5ee4c9?w=800" alt="Côte Amalfitaine, Italie">
             <span class="etiquette">-15 %</span>
@@ -136,7 +136,7 @@
           </div>
         </a>
 
-        <a class="voyage" href="destination.html">
+        <a class="voyage" href="destination.php">
           <div class="voyage-image">
             <img src="https://images.unsplash.com/photo-1596109898239-d8f0b19790a2?w=800" alt="Barcelone, Espagne">
           </div>
@@ -154,10 +154,10 @@
 
       <!-- Pages de résultats -->
       <div class="pagination">
-        <a class="actif" href="offres.html">1</a>
-        <a href="offres.html">2</a>
-        <a href="offres.html">3</a>
-        <a href="offres.html">→</a>
+        <a class="actif" href="offres.php">1</a>
+        <a href="offres.php">2</a>
+        <a href="offres.php">3</a>
+        <a href="offres.php">→</a>
       </div>
     </main>
   </div>
@@ -166,21 +166,21 @@
   <footer>
     <div class="colonnes">
       <div>
-        <a href="index.html"><img class="logo-image" src="img/logo.jpg" alt="Click & Go"></a>
+        <a href="index.php"><img class="logo-image" src="img/logo.jpg" alt="Click & Go"></a>
         <p>Le monde à portée de clic.</p>
       </div>
       <div>
         <h3>Réserver</h3>
-        <a href="offres.html">Vols</a>
-        <a href="offres.html">Hébergements</a>
-        <a href="offres.html">Voyages tout prêts</a>
-        <a href="offres.html">Activités</a>
+        <a href="offres.php">Vols</a>
+        <a href="offres.php">Hébergements</a>
+        <a href="offres.php">Voyages tout prêts</a>
+        <a href="offres.php">Activités</a>
       </div>
       <div>
         <h3>Découvrir</h3>
-        <a href="destinations.html">Destinations</a>
-        <a href="guides.html">Guides et conseils</a>
-        <a href="a-propos.html">À propos et contact</a>
+        <a href="destinations.php">Destinations</a>
+        <a href="guides.php">Guides et conseils</a>
+        <a href="a-propos.php">À propos et contact</a>
       </div>
     </div>
     <p class="copyright">© 2026 Click & Go</p>
