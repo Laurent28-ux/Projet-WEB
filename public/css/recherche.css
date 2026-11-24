@@ -1,0 +1,93 @@
+/* ===== CLICK & GO - Carte de recherche =====
+   Bleu foncé : #1800ad
+   Bleu clair : #80b1f2
+   Blanc      : #ffffff
+*/
+
+/* ----- Carte de recherche ----- */
+.recherche {
+  position: relative; /* passe au-dessus des vidéos */
+  z-index: 2;
+  width: 900px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* On cache les ronds des boutons radio, on garde seulement le texte */
+.onglets input {
+  display: none;
+}
+
+.onglets label {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Onglet choisi : fond bleu foncé */
+.onglets input:checked + label {
+  background: #1800ad;
+  color: #ffffff;
+}
+
+.champs {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.champ {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #dce9fa;
+  border-radius: 10px;
+  color: #1800ad;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.champ input {
+  display: block;
+  width: 100%;
+  border: none;
+  font-size: 15px;
+  color: #11133b;
+}
+
+.recherche button {
+  padding: 0 25px;
+  border: none;
+  border-radius: 10px;
+  background: #1800ad;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ----- Tablette et téléphone ----- */
+@media (max-width: 1000px) {
+  .recherche {
+    width: auto;
+    margin: 0 20px;
+  }
+
+  .champs {
+    flex-direction: column;
+  }
+
+  .recherche button {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .onglets label {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
