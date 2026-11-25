@@ -401,3 +401,227 @@ footer {
     animation: none;
   }
 }
+/* ===== Page d'un guide (guide.php) ===== */
+
+/* Barre de progression en haut */
+.progression {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  height: 4px;
+  background: #dce9fa;
+}
+
+.progression span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: #1800ad;
+  transition: width 0.1s linear;
+}
+
+/* ----- Titre de l'article ----- */
+.entete-article {
+  padding: 60px 60px 90px;
+  background: #1800ad;
+  color: #ffffff;
+  text-align: center;
+}
+
+.retour {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: #80b1f2;
+  font-weight: bold;
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.retour:hover {
+  color: #ffffff;
+}
+
+.entete-article .etiquette {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 18px;
+  background: #80b1f2;
+  color: #1800ad;
+}
+
+.entete-article h1 {
+  max-width: 860px;
+  margin: 0 auto 16px;
+  font-size: clamp(32px, 4.5vw, 52px);
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.entete-article .chapeau {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #dce9fa;
+  font-size: 18px;
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.infos-lecture {
+  margin-top: 18px;
+  color: #80b1f2;
+  font-size: 14px;
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+/* Image qui chevauche le titre bleu */
+.couverture {
+  max-width: 960px;
+  margin: -50px auto 0;
+  padding: 0 20px;
+}
+
+.couverture img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 40px rgba(24, 0, 173, 0.2);
+}
+
+/* ----- Corps de l'article ----- */
+.article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 20px 70px;
+  font-size: 18px;
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #11133b;
+  line-height: 1.7;
+}
+
+.article h2 {
+  margin: 44px 0 14px;
+  color: #1800ad;
+  font-size: 28px;
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.2;
+}
+
+.article h2:first-child {
+  margin-top: 0;
+}
+
+.article p {
+  margin-bottom: 16px;
+}
+
+.article ul {
+  margin: 0 0 20px 24px;
+}
+
+.article li {
+  margin-bottom: 10px;
+}
+
+/* Encadré conseil */
+.conseil {
+  margin-top: 50px;
+  padding: 24px 28px;
+  background: #f2f7ff;
+  border-left: 5px solid #1800ad;
+  border-radius: 0 14px 14px 0;
+}
+
+.conseil strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #1800ad;
+  font-size: 15px;
+}
+
+.conseil p {
+  margin-bottom: 0;
+  color: #646a85;
+}
+
+/* ----- Section À lire aussi ----- */
+.section.fond-clair {
+  padding: 80px 60px;
+  background: #f2f7ff;
+}
+
+.section.fond-clair h2 {
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #11133b;
+}
+
+/* ----- Appel à l'action ----- */
+.appel {
+  padding: 80px 60px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.appel h2 {
+  margin-bottom: 12px;
+  font-size: 36px;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #11133b;
+}
+
+.appel p {
+  margin-bottom: 24px;
+  color: #646a85;
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+/* ----- Page introuvable ----- */
+.introuvable {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.introuvable h1 {
+  margin-bottom: 16px;
+  font-size: 40px;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #11133b;
+}
+
+.introuvable p {
+  margin-bottom: 28px;
+  color: #646a85;
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 1000px) {
+  .entete-article {
+    padding: 40px 20px 80px;
+  }
+
+  .entete-article h1 {
+    font-size: 32px;
+  }
+
+  .couverture img {
+    height: 260px;
+  }
+
+  .article {
+    font-size: 17px;
+    padding: 40px 20px 50px;
+  }
+
+  .article h2 {
+    font-size: 24px;
+  }
+
+  .section.fond-clair,
+  .appel {
+    padding: 60px 20px;
+  }
+}
