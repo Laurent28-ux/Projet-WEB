@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click & Go - Espace Voyage</title>
+   <link rel="stylesheet" href="/css/style.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar avec le Logo Click & Go animé -->
+        <aside class="sidebar">
+            <div>
+                <div class="logo-container">
+                    <div class="logo-box">
+                        <span class="logo-click">CLICK</span>
+                        <span class="logo-amp">&amp;</span>
+                        <span class="logo-go">GO <i class="fa-solid fa-plane"></i></span>
+                    </div>
+                </div>
+
+                <div class="user-profile">
+                    <div class="avatar">MD</div>
+                    <div class="user-info">
+                        <span class="user-name">Imade AYIVI</span>
+                        <span class="user-email">Imade@gmail.com</span>
+                    </div>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active">
+                        <i class="fa-regular fa-compass"></i> Vue d'ensemble
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fa-regular fa-suitcase"></i> Mes réservations
+                        <span class="badge">2</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fa-regular fa-file-lines"></i> Mes documents
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fa-regular fa-heart"></i> Mes favoris
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fa-regular fa-user"></i> Mon profil
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item logout">Se déconnecter</a>
+            </div>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-text">
+                    <span class="subtitle">VOTRE ESPACE VOYAGE</span>
+                    <h1>Bonjour Imade, prêt à repartir ?</h1>
+                    <p>Retrouvez ici toutes les informations utiles pour vos prochaines aventures.</p>
+                </div>
+                <button class="btn-primary">
+                    Explorer les voyages
+                </button>
+            </header>
+
+            <!-- Carte : Prochain Voyage -->
+            <section class="card next-trip-card">
+                <div class="trip-image-container">
+                    <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" alt="Les Cyclades">
+                    <span class="tag-avenir">À VENIR</span>
+                </div>
+                <div class="trip-details">
+                    <div class="trip-header-row">
+                        <div>
+                            <span class="section-label">VOTRE PROCHAIN VOYAGE</span>
+                            <h2>Les Cyclades en douceur</h2>
+                            <p class="trip-dates">12 – 19 septembre 2025 • 2 voyageurs</p>
+                        </div>
+                        <span class="badge-countdown">DÉPART DANS </span>
+                    </div>
+
+                    <div class="trip-info-grid">
+                        <div class="info-col">
+                            <span class="info-title">Réservation</span>
+                            <span class="info-value">CG-2025-1842</span>
+                        </div>
+                        <div class="info-col">
+                            <span class="info-title">Statut</span>
+                            <span class="info-value status-confirmed"><i class="fa-solid fa-circle"></i> Confirmée</span>
+                        </div>
+                        <div class="info-col">
+                            <span class="info-title">Solde</span>
+                            <span class="info-value">Payé</span>
+                        </div>
+                    </div>
+
+                    <div class="trip-actions">
+                        <a href="#">Voir le détail</a>
+                        <a href="#">Télécharger le carnet <i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grille inférieure -->
+            <div class="bottom-grid">
+                <!-- Documents -->
+                <div class="card sub-card">
+                    <div class="card-header-flex">
+                        <div>
+                            <span class="section-label">DOCUMENTS</span>
+                            <h3>Prêts pour le départ</h3>
+                        </div>
+                        <a href="#" class="link-view-all">Tout voir</a>
+                    </div>
+
+                    <div class="doc-list">
+                        <div class="doc-item">
+                            <div class="doc-icon pdf">PDF</div>
+                            <div class="doc-meta">
+                                <strong>Carnet de voyage</strong>
+                                <span>Mis à jour le 2 août</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-down doc-download"></i>
+                        </div>
+                        <div class="doc-item">
+                            <div class="doc-icon pdf">PDF</div>
+                            <div class="doc-meta">
+                                <strong>Billets électroniques</strong>
+                                <span>2 voyageurs</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-down doc-download"></i>
+                        </div>
+                        <div class="doc-item">
+                            <div class="doc-icon pdf">PDF</div>
+                            <div class="doc-meta">
+                                <strong>Facture</strong>
+                                <span>Réservation CG-2025-1842</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-down doc-download"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Favoris & Aide -->
+                <div class="right-column-stack">
+                    <div class="card sub-card">
+                        <div class="card-header-flex">
+                            <div>
+                                <span class="section-label">VOS FAVORIS</span>
+                                <h3>À garder en tête</h3>
+                            </div>
+                            <a href="#" class="link-view-all">Tout voir</a>
+                        </div>
+                        <div class="favorite-item">
+                            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=150&q=80" alt="Côte Amalfitaine">
+                            <div class="fav-info">
+                                <span class="fav-location">ITALIE • 7 JOURS</span>
+                                <h4>La dolce vita amalfitaine</h4>
+                                <span class="fav-price">dès 549 € / pers.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card help-card">
+                        <div class="help-icon">
+                            <i class="fa-solid fa-question"></i>
+                        </div>
+                        <div class="help-content">
+                            <h4>Besoin d'un conseil ?</h4>
+                            <p>Échangez avec votre conseiller</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right help-arrow"></i>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
